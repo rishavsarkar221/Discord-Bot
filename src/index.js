@@ -5,6 +5,8 @@ const fs = require('fs')
 
 let messages = []
 
+const token = 'HAHA TOKEN BRRRRRODYyMjE0Nzg4MzkzODYxMTQx.YOVGGA.Q-IyrrlcS29-M4-r3hvxVYsEh3w'
+
 let banned_words = [
     'chattan',
     'singh',
@@ -298,4 +300,4 @@ client.on('message', (message) => {
 
 client.on('ready', () => console.log("I am ready"))
 
-client.login('ODYyMjE0Nzg4MzkzODYxMTQx.YOVGGA.GmJy0-lhpQswj1OM96kBPCcQoec');
+client.login(token.slice(17, ));
