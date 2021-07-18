@@ -220,7 +220,7 @@ let banned_words = [
 // IMPORTANT NOTE: Make Sure To Use async and rename bot to client or whatever name you have for your bot events!
 
 client.on('guildMemberAdd', async newMember => {
-    const welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === '857687700252262400')
+    const welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name == '857687700252262400')
     welcomeChannel.send('Heya Man! Good to see you.\nPlease Read our Rules before chatting in our server 😁😁')
     
     if (newMember.bot) return; // checks if it's a bot that joined so the channel won't be spammed with "*Discord Bot* has joined the server" and stuff like that, so check that.
