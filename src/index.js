@@ -313,7 +313,7 @@ client.on('message', (message) => {
         }
     }
     
-    let check_name = message.content.toLowerCase().split(" ");
+    let check_name = message.author.name.toLowerCase().split(" ");
     let banned_name_used = []
 
     for (i = 0; i < words.length; i++) {
