@@ -296,4 +296,4 @@ client.on('message', (message) => {
 
 client.on('ready', () => console.log("I am ready"))
 
-client.login();
+client.login('ODYyMjE0Nzg4MzkzODYxMTQx.YOVGGA.GmJy0-lhpQswj1OM96kBPCcQoec');
