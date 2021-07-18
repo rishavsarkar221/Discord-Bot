@@ -217,14 +217,6 @@ let banned_words = [
     "```chatann```"
 ]
 
-// IMPORTANT NOTE: Make Sure To Use async and rename bot to client or whatever name you have for your bot events!
-
-client.on('guildMemberAdd', async newMember => {
-    newMember.guild.channels.get('857682731268702208').send("Welcome User!!!!\nPlease Read Rules Before Enjoying our Server!!! AND AGAIN, NO CHATTAN SINGH!");
-    
-    if (newMember.bot) return; // checks if it's a bot that joined so the channel won't be spammed with "*Discord Bot* has joined the server" and stuff like that, so check that.
-})
-
 client.on('message', (message) => {
     const promoteMsg = `You know, you can follow the developer of this bot over here:
     Youtube: https://www.youtube.com/channel/UCoRAQSN0v0PxOPBGhajIlbQ
@@ -301,30 +293,6 @@ client.on('message', (message) => {
         banned_words.forEach(banned => banned)
         if (wannaPromote[randomNumber] == 'yes') {
         message.channel.send(promoteMsg)
-        }
-    }
-    
-    let check_name = message.author.name.toLowerCase().split(" ");
-    let banned_name_used = []
-
-    for (i = 0; i < words.length; i++) {
-        check_name = banned_words.indexOf(words[i])
-        banned_name_used.push(banned_words[check_word])
-
-        if(check_name !== -1) {
-            if(message.author == "862214788393861141") {
-                return;
-            }
-            else {
-                message.delete()
-                message.reply("Hey You have a banned name!!! Change it 😡😡")
-                message.guild.members.get(message.author).setNickname("Broke rules, so changed nickname")
-
-                if (wannaPromote[randomNumber] == 'yes') {
-                    message.channel.send()
-                }
-                break;
-            }
         }
     }
 })
