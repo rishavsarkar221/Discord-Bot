@@ -244,7 +244,7 @@ client.on('message', (message) => {
             if(message.author == "862214788393861141") {
                 return;
             }
-            else if(message.author == "659626738069798943") {
+           else {
                 message.delete()        
                 message.reply("Dont say banned word\nWord: " + message.content + "\nBanned Word Used: " + banned_words_used)
                 
@@ -252,7 +252,7 @@ client.on('message', (message) => {
                     message.channel.send()
                 }
                 break;
-            }    
+           }
         }
     }
 
