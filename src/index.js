@@ -237,7 +237,7 @@ client.on('message', (message) => {
     let banned_words_used = []
 
     for (i = 0; i < words.length; i++) {
-        check_word = banned_words.indexOf(words[i])
+        let check_word = banned_words.indexOf(words[i])
         banned_words_used.push(banned_words[check_word])
 
         if(check_word !== -1) {
@@ -291,9 +291,6 @@ client.on('message', (message) => {
     
     else if(message.content == "!banned") {
         banned_words.forEach(banned => banned)
-        if (wannaPromote[randomNumber] == 'yes') {
-        message.channel.send(promoteMsg)
-        }
     }
 })
 
